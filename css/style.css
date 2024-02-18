@@ -143,12 +143,13 @@ main:focus{
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   row-gap: 15px;
+  column-gap: 15px;
 }
 
 /* Step 5: Write selector/rule property to add the background image to the 
 first div in the grid  and place it in the grid. */
 .container div:first-child{
-  grid-column: 1 / span 3;
+  grid-column: 1 / -1;
   grid-row: 1;
   background-image: url('/images/header.jpg');
 }
@@ -210,9 +211,11 @@ first div in the grid  and place it in the grid. */
 
  /* Step 8: Write the selector/rule property to style the .text-block class. */
 .text-block{
+  display: grid;
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
+  align-content: center;
 }
 
 /* Add your media query here */
